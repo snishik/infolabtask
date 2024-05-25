@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 const Home = ({ visits, incrementVisits }) => {
   useEffect(() => {
     incrementVisits();
-  }, []);
+  }, [incrementVisits]);
 
   return (
     <div>
