@@ -10,9 +10,9 @@ import './styles.css';
 const App = () => {
   const [visits, setVisits] = useState(0);
 
-  const incrementVisits = () => {
-    setVisits(visits + 1);
-  };
+  const incrementVisits = useCallback(() => {
+    setVisits(prevVisits => prevVisits + 1);
+  }, []);
 
   return (
     <Router>
